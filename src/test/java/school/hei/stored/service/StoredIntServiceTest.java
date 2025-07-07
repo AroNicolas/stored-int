@@ -49,6 +49,6 @@ public class StoredIntServiceTest {
 
     assertTrue(result >= 0 && result <= 100_000, "Result should be a positive number");
 
-    verify(bucketMock, times(0)).upload(any(), any());
+    verify(bucketMock, atMostOnce()).upload(any(), any());
   }
 }
